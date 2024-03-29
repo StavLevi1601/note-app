@@ -61,21 +61,23 @@ function Form() {
       <div className="justify-content: flex-start">
         <form onSubmit={handleSubmit}>
           <h1>Notes</h1>
-          <input
-            type="text"
-            placeholder="Add Note"
-            className="input input-bordered w-full max-w-xs"
-            defaultValue=""
-            value={newNote}
-            onChange={handleChange}
-          />
-          <button
-            type="submit"
-            className="btn"
-            style={{ backgroundColor: 'black', color: 'white' }}
-          >
-            Add Note
-          </button>
+          <div>
+            <input
+              type="text"
+              placeholder="Add Note"
+              className="input input-bordered w-full max-w-xs"
+              defaultValue=""
+              value={newNote}
+              onChange={handleChange}
+            />
+            <button
+              type="submit"
+              className="btn"
+              style={{ backgroundColor: 'black', color: 'white' }}
+            >
+              Add Note
+            </button>
+          </div>
         </form>
         <div style={{ flex: 'disply' }}>
           <div
@@ -91,14 +93,14 @@ function Form() {
                       <button
                         className="btn"
                         onClick={() => handleUpdate(note)} // Fix: Pass a function reference instead of invoking the function directly
-                        style={{ backgroundColor: 'blue', color: 'white' }}
+                        style={{ backgroundColor: 'black', color: 'white' }}
                       >
                         Update Note
                       </button>
                       <button
                         className="btn"
                         onClick={() => handleDelete(note)} // Fix: Pass a function reference instead of invoking the function directly
-                        style={{ backgroundColor: 'blue', color: 'white' }}
+                        style={{ backgroundColor: 'black', color: 'white' }}
                       >
                         Delete Note
                       </button>
@@ -122,13 +124,13 @@ function Form() {
             <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
               <button
                 className="btn"
-                style={{ backgroundColor: 'blue' }}
+                style={{ backgroundColor: 'black' }}
                 onClick={handleSave}
               >
                 Save
               </button>
               <button
-                style={{ backgroundColor: 'blue' }}
+                style={{ backgroundColor: 'black' }}
                 onClick={() => setShowModal(false)}
               >
                 Close
